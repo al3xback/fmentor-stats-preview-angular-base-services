@@ -1,0 +1,15 @@
+<div class="image">
+	<div class="image-inner">
+		<img [src]="card.imageUrl" alt="" />
+	</div>
+</div>
+<div class="content">
+	<h2 class="title" [innerHTML]="card.title"></h2>
+	<p class="desc">{{ card.description }}</p>
+	<ul class="stats-list">
+		<li *ngFor="let status of card.statuses" class="stats-list-item">
+			<span class="num">{{ status.amount }}</span>
+			<span class="label">{{ status.label }}</span>
+		</li>
+	</ul>
+</div>
